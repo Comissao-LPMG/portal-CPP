@@ -8,11 +8,11 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
+      background-color: #f9f9f9;
     }
 
     header {
-      background-color: white;
+      background-color: #fff;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -26,6 +26,7 @@
 
     .faixa {
       background-color: #356854;
+      color: white;
       padding: 1rem 2rem;
       text-align: center;
       font-size: 0.95rem;
@@ -40,6 +41,7 @@
 
     .container {
       display: flex;
+      flex-direction: row;
       flex-wrap: wrap;
       padding: 1rem 2rem;
     }
@@ -55,18 +57,26 @@
       color: #003366;
     }
 
-    .coluna-esquerda ul {
-      list-style: none;
-      padding-left: 0;
+    .sidebar {
+      width: 250px;
+      background-color: #f1f1f1;
+      padding: 15px;
+      margin-right: 30px;
+      border-radius: 5px;
     }
 
-    .coluna-esquerda li {
-      margin-bottom: 0.5rem;
+    .sidebar h3 {
+      margin-top: 20px;
+      font-size: 16px;
+      color: #356854;
     }
 
-    .coluna-esquerda a {
+    .sidebar a {
+      display: block;
       text-decoration: none;
-      color: #007BFF;
+      color: #333;
+      margin: 5px 0 10px 10px;
+      font-size: 14px;
     }
 
     .coluna-centro {
