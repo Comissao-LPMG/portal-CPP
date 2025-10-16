@@ -122,6 +122,11 @@
     .highlight-banner a:hover {
       text-decoration: underline;
     }
+    .bold-italic {            /* para formatar em itálico-negrito algumas palavaras no subtexto do destaque, a fim de obter a renderização pelo Firefox */
+      font-weight: 700;       /* negrito */
+      font-style: italic;     /* itálico */
+      color: #2d6e5e;         /* mesma cor do h2 */
+    }
 
     @media (max-width: 768px) {
       .main {
@@ -178,7 +183,7 @@
     <div class="highlight-banner">
       <h2>📌 Destaque – últimos resultados homologados: 3ª remessa do PAP-01/2024, 2ª remessa do PAP-01/2025 e 1ª remessa do PAP-02/2025</h2>
       <p>
-        Verifique se você foi avaliado clicando nos links <strong><i>Lista de avaliados</i></strong> localizados no <strong>Acervo</strong> ao lado (ou abaixo); se seu nome estiver listado, clique no link <strong><i>Consultar resultados</i></strong> correspondente ao PAP da lista e consulte o resultado da sua avaliação.
+        Verifique se você foi avaliado clicando nos links <span class="bold-italic">Lista de avaliados</span> localizados no <strong>Acervo</strong> ao lado (ou abaixo); se seu nome estiver listado, clique no link <span class="bold-italic">Consultar resultados</span> correspondente ao PAP da lista e consulte o resultado da sua avaliação.
       </p>
     </div>
   </div>
