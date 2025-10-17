@@ -48,7 +48,7 @@
       flex-direction: row;
       align-items: flex-start;
       padding: 1rem 2rem;
-      gap: 0.5rem; /* espaço lateral entre banner e sidebar (desktop) */
+      gap: 0.5rem; /* espaçamento lateral entre banner e sidebar */
     }
 
     .coluna-esquerda {
@@ -68,8 +68,6 @@
       background-color: #f1f1f1;
       padding: 15px;
       border-radius: 5px;
-      margin-left: 20px; /* pequeno afastamento do conteúdo à esquerda */
-      /* mantenha margin-right grande o suficiente se quiser mais "respiro" */
     }
 
     .sidebar h2 {
@@ -121,21 +119,24 @@
       margin-bottom: 10px;
     }
 
+    /* ⚙️ Aqui estava o conflito */
     .highlight-banner p {
       color: #2d6e5e;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: normal; /* Removido bold global */
+      margin: 0;
     }
 
     .highlight-banner a:hover {
       text-decoration: underline;
     }
 
-    .bold-italic { 
-      font-family: "Times New Roman", Georgia, serif; 
-      font-weight:700; 
-      font-style:italic; 
-      color:#2d6e5e; 
+    /* === 7. CLASSE DE ÊNFASE (itálico + negrito) === */
+    .highlight-banner .bold-italic {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      font-style: italic;
+      color: #2d6e5e;
     }
 
     /* === 8. RESPONSIVIDADE (mobile) === */
@@ -150,13 +151,12 @@
       }
 
       .faixa {
-        text-align: justify; /* exceção para mobile */
+        text-align: justify;
       }
 
       .sidebar {
         margin: 1rem auto;
         width: 90%;
-        margin-left: 0; /* remove margin-left no mobile */
       }
     }
 
@@ -192,7 +192,10 @@
       <div class="highlight-banner">
         <h2>📌 Destaque – últimos resultados homologados: 3ª remessa do PAP-01/2024, 2ª remessa do PAP-01/2025 e 1ª remessa do PAP-02/2025</h2>
         <p>
-          Verifique se você foi avaliado clicando nos links <span class="bold-italic">Lista de avaliados</span> localizados no <strong>Acervo</strong> ao lado (ou abaixo); se seu nome estiver listado, clique no link <span class="bold-italic">Consultar resultados</span> correspondente ao PAP da lista e consulte o resultado da sua avaliação.
+          Verifique se você foi avaliado clicando nos links 
+          <span class="bold-italic">Lista de avaliados</span> localizados no 
+          <strong>Acervo</strong> ao lado (ou abaixo); se seu nome estiver listado, clique no link 
+          <span class="bold-italic">Consultar resultados</span> correspondente ao PAP da lista e consulte o resultado da sua avaliação.
         </p>
       </div>
     </div>
@@ -205,35 +208,22 @@
       <a href="https://drive.google.com/drive/folders/1I9P_QQJ1clYsISPUiF9v3zT3tQCWGlrh?usp=sharing" target="_blank" rel="noopener">• Atas de Reuniões</a>
 
       <h3>PAP-02/2025</h3>
-      <a href="https://drive.google.com/file/d/19d2IkH0JkrbVFTZwqZYUn7WKpbWk5EcQ/view?usp=sharing" 
-        target="_blank" rel="noopener">• Lista de avaliados - 1ª remessa</a>
-      <a href="https://drive.google.com/file/d/1avUFw4WWmFEP3x5W1gDYAtpJonuc1Gq5/view?usp=drive_link" 
-        target="_blank" rel="noopener">• Comunicado de convocação 02/2025</a>
-      <a href="https://script.google.com/macros/s/AKfycbxBIVqrgdbe9e63jwQ-A6lrRRiErbpjuxHXay6PtR5fK6-7bQFMiEIULoCvFUagi5voLQ/exec" 
-        target="_blank" rel="noopener">• Consultar resultados</a>
+      <a href="https://drive.google.com/file/d/19d2IkH0JkrbVFTZwqZYUn7WKpbWk5EcQ/view?usp=sharing" target="_blank" rel="noopener">• Lista de avaliados - 1ª remessa</a>
+      <a href="https://drive.google.com/file/d/1avUFw4WWmFEP3x5W1gDYAtpJonuc1Gq5/view?usp=drive_link" target="_blank" rel="noopener">• Comunicado de convocação 02/2025</a>
+      <a href="https://script.google.com/macros/s/AKfycbxBIVqrgdbe9e63jwQ-A6lrRRiErbpjuxHXay6PtR5fK6-7bQFMiEIULoCvFUagi5voLQ/exec" target="_blank" rel="noopener">• Consultar resultados</a>
 
-     <h3>PAP-01/2025</h3>
-     <a href="https://drive.google.com/file/d/1Mo6GlTzIrjDU0U1Y1-D5dYcqWw91bPIf/view?usp=sharing" 
-       target="_blank" rel="noopener">• Lista de avaliados - 1ª remessa</a>
-     <a href="https://drive.google.com/file/d/1Try_TlhSOxK8MzhfsOGKtaOI1I9zqPQk/view?usp=sharing" 
-       target="_blank" rel="noopener">• Lista de avaliados - 2ª remessa</a>
-     <a href="https://drive.google.com/file/d/1-eTjM2MXV540cdRZuuzxZ4K_rhKqmiRT/view?usp=sharing" 
-       target="_blank" rel="noopener">• Comunicado de convocação 01/2025</a> 
-     <a href="https://script.google.com/macros/s/AKfycbzuG3iQkE1jGoCgMaWxJF0b5q3QghEXMkLIqVAB_1MYInEUO5tOuK4TyFg9pwOBCw7m/exec" 
-       target="_blank" rel="noopener">• Consultar resultados</a>
-  
-     <h3>PAP-01/2024</h3>
-     <a href="https://drive.google.com/file/d/1b2qVT0k0VsdSwiV6e8HNSzv_wIvlihb7/view?usp=sharing" 
-       target="_blank" rel="noopener">• Lista de avaliados - 1ª remessa</a>
-     <a href="https://drive.google.com/file/d/1L7t68hJLGXO7NDE5PcsnG-8vLXEBn6WS/view?usp=sharing" 
-       target="_blank" rel="noopener">• Lista de avaliados - 2ª remessa</a>
-     <a href="https://drive.google.com/file/d/1tDsTxHEmxcMZ49Uyy_tTUtP9xeKvCeCU/view?usp=sharing" 
-       target="_blank" rel="noopener">• Lista de avaliados - 3ª remessa</a>
-     <a href="https://drive.google.com/file/d/1gAh-jHjmvFk7wyygw2xm53veZj75P1cN/view?usp=sharing" 
-       target="_blank" rel="noopener">• Comunicado de convocação 02</a> 
-     <a href="https://script.google.com/macros/s/AKfycbxjo_M-LMXN90jYRU6umKMwrtS7nCF9x2cngu3nxP4y6b_jxt6nuH67hQek0lzdPQuR/exec" 
-       target="_blank" rel="noopener">• Consultar resultados</a>
+      <h3>PAP-01/2025</h3>
+      <a href="https://drive.google.com/file/d/1Mo6GlTzIrjDU0U1Y1-D5dYcqWw91bPIf/view?usp=sharing" target="_blank" rel="noopener">• Lista de avaliados - 1ª remessa</a>
+      <a href="https://drive.google.com/file/d/1Try_TlhSOxK8MzhfsOGKtaOI1I9zqPQk/view?usp=sharing" target="_blank" rel="noopener">• Lista de avaliados - 2ª remessa</a>
+      <a href="https://drive.google.com/file/d/1-eTjM2MXV540cdRZuuzxZ4K_rhKqmiRT/view?usp=sharing" target="_blank" rel="noopener">• Comunicado de convocação 01/2025</a>
+      <a href="https://script.google.com/macros/s/AKfycbzuG3iQkE1jGoCgMaWxJF0b5q3QghEXMkLIqVAB_1MYInEUO5tOuK4TyFg9pwOBCw7m/exec" target="_blank" rel="noopener">• Consultar resultados</a>
 
+      <h3>PAP-01/2024</h3>
+      <a href="https://drive.google.com/file/d/1b2qVT0k0VsdSwiV6e8HNSzv_wIvlihb7/view?usp=sharing" target="_blank" rel="noopener">• Lista de avaliados - 1ª remessa</a>
+      <a href="https://drive.google.com/file/d/1L7t68hJLGXO7NDE5PcsnG-8vLXEBn6WS/view?usp=sharing" target="_blank" rel="noopener">• Lista de avaliados - 2ª remessa</a>
+      <a href="https://drive.google.com/file/d/1tDsTxHEmxcMZ49Uyy_tTUtP9xeKvCeCU/view?usp=sharing" target="_blank" rel="noopener">• Lista de avaliados - 3ª remessa</a>
+      <a href="https://drive.google.com/file/d/1gAh-jHjmvFk7wyygw2xm53veZj75P1cN/view?usp=sharing" target="_blank" rel="noopener">• Comunicado de convocação 02</a>
+      <a href="https://script.google.com/macros/s/AKfycbxjo_M-LMXN90jYRU6umKMwrtS7nCF9x2cngu3nxP4y6b_jxt6nuH67hQek0lzdPQuR/exec" target="_blank" rel="noopener">• Consultar resultados</a>
     </div>
 
   </div>
